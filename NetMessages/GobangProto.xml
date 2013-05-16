@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<coder name="GobangProto" version="1" >
+    <client processor="GobangMsgProcessor" include="communication.gobang.*;flash.utils.ByteArray;protobuf.*" namespace="communication.gobang"/>
+    <server processor="Session" include="session" />
+    <protocolbuffers>
+        package protobuf;
+		
+		message SSPKG_LOGIN_REQ
+        {
+        required string account  = 1;
+        required string password = 2;
+        }
+
+        message SSPKG_LOGIN_ACK
+        {
+       
+        }
+
+    </protocolbuffers>
+    <messages>
+        <message name="SSID_LOGIN_REQ" id="1" type="SSPKG_LOGIN_REQ" proc_fun="OnRecvLoginReq" by="server"/>
+        <message name="SSID_LOGIN_ACK" id="2" type="SSPKG_LOGIN_ACK" proc_fun="OnRecvLoginAck" by="client"/>
+    </messages>
+</coder>

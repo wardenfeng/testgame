@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<coder name="GSProto" version="1" >
+    <server processor="HRole" include="Role" />
+    <client processor="CGateMessage" include="GateMessage" />
+    <protocolbuffers>
+        message GSPKG_MESSAGE1_RPT
+        {
+        required uint64 role_id = 1;
+        }
+
+        message GSPKG_ENTER_GAME_ACK
+        {
+        required uint32 error_code = 2;
+        }
+
+        message GSPKG_CHAT_REQ
+        {
+        optional bytes wisper_role_name = 2;
+        required bytes txt = 3;
+        }
+    </protocolbuffers>
+    <messages>
+        <message name="GSID_MESSAGE1_RPT" id="1" type="GSPKG_MESSAGE1_RPT" proc_fun="message1_proc" by="server"/>
+        <message name="GSID_CHAT_REQ" id="1005" type="GSPKG_CHAT_REQ" proc_fun="OnChatReq" by="server" />
+    </messages>
+</coder>

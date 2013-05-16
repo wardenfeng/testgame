@@ -1,0 +1,14 @@
+		package protobuf;
+
+		message SSPKG_LOGIN_REQ
+        {
+        required string account  = 1;
+        required string password = 2;
+        }
+
+        message SSPKG_LOGIN_ACK
+        {
+       required bool success   = 1;
+        }
+
+    

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<coder name="GSProto" version="1" processor="processor" include="test.h">
+  <protocolbuffers>
+    message GSPKG_MESSAGE1_RPT
+    {
+    
+    }
+  </protocolbuffers>
+  <messages>
+    <message name="GSID_MESSAGE1_RPT" id="1" type="GSPKG_MESSAGE1_RPT" proc_fun="message1_proc" by="server"/>
+  </messages>
+</coder>
