@@ -1,0 +1,7 @@
+<config>
+		<server>
+			<policy>843</policy>
+			<host>localhost</host>
+			<port>8887</port>
+		</server>
+</config>
